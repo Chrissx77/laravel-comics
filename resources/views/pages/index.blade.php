@@ -3,5 +3,12 @@
     <title>Home</title>
 @endsection
 @section('content')
-    <h1>Hello, World {{$name}}</h1>
+    <div class="container">
+        @foreach ($comics as $comic)
+            <div class="card">
+                <img src={{ $comic['thumb'] }} alt="" srcset="">
+                <small>{{ $comic['title'] }}</small>
+            </div>
+        @endforeach
+    </div>
 @endsection
